@@ -16,3 +16,17 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/salam', function () {
+    return "Selamat Datang";
+});
+
+Route::get('/ucapan', function () {
+    return view('ucapan');
+});
+Route::get('/nilai', function () {
+    return view('nilai');
+});
+Route::get('/daftar_nilai', function () {
+    return view('daftar_nilai');
+});
