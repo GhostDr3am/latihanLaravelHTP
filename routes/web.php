@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\SiswaController; //panggil semua file Controller yang ada di folder Controller
 
 /*
 |--------------------------------------------------------------------------
@@ -30,3 +31,5 @@ Route::get('/nilai', function () {
 Route::get('/daftar_nilai', function () {
     return view('daftar_nilai');
 });
+// mengarahkan routing ke Controller
+Route::get('/siswa', [SiswaController::class, 'dataSiswa']);
