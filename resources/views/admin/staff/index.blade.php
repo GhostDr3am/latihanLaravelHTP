@@ -2,16 +2,19 @@
 @section('content')
 <tbody>
     @php
-    $i = 1;
+    $no = 1;
     @endphp
     @foreach ($ar_staff as $row)
-    <tr>
-        <td>{{$no}}</td>
-        <td>{{$row->nip}}</td>
-        <td>{{$row->name}}</td>
-        <td>{{$row->gender}}</td>
-        <td>{{$row->alamat}}</td>
-    </tr>
+    <table border="1" callpadding="10">
+        <tr>
+            <td>{{$no++}}</td>
+            <td>{{$row->nip}}</td>
+            <td>{{$row->nama}}</td>
+            <td>{{$row->gender}}</td>
+            <td>{{$row->alamat}}</td>
+        </tr>
+    </table>
+
 
 
     @endforeach
