@@ -4,19 +4,27 @@
     @php
     $no = 1;
     @endphp
-    @foreach ($ar_staff as $row)
-    <table border="1" callpadding="10">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">No</th>
+            <th scope="col">Nip</th>
+            <th scope="col">Nama</th>
+            <th scope="col">Jenis Kelamin</th>
+            <th scope="col">Alamat</th>
+          </tr>
+        </thead>
+        <tbody>
+        @foreach ($ar_staff as $row)
         <tr>
-            <td>{{$no++}}</td>
+            <th>{{$no++}}</th>
             <td>{{$row->nip}}</td>
             <td>{{$row->nama}}</td>
             <td>{{$row->gender}}</td>
             <td>{{$row->alamat}}</td>
-        </tr>
-    </table>
-
-
-
-    @endforeach
+          </tr>
+        @endforeach
+        </tbody>
+      </table>
 </tbody>
 @endsection
