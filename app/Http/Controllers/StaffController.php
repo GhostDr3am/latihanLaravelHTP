@@ -12,8 +12,8 @@ class StaffController extends Controller
      */
     public function index()
     {
-        $ar_staff = DB::table('staff')->get();// query builder
-        // $ar_staff = Staff::all(); //query eloquent
+        // $ar_staff = DB::table('staff')->All();// query builder
+        $ar_staff = Staff::all(); //query eloquent
         return view('admin.staff.index', compact('ar_staff'));
     }
 
